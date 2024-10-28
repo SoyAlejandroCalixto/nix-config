@@ -10,7 +10,7 @@
     nodejs
     nodePackages_latest.eas-cli
     wrangler
-    bitwarden-cli
+    bitwarden-desktop
     git
     vlc
     wl-clipboard

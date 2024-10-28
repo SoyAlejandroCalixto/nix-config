@@ -9,4 +9,7 @@
     ./desktop/wm.nix
     ./apps/vscode.nix
   ];
+  
+  home.username = "kappy";
+  home.homeDirectory = "/home/kappy";
 }
