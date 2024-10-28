@@ -35,7 +35,7 @@ git clone https://github.com/SoyAlejandroCalixto/nix-config.git ~/.nixos
 { config, pkgs, ... }:
 {
   imports = [
-    /home/kappy/.nixos/home-config/main.nix
+    /home/<user>/.nixos/home-config/main.nix
   ];
   home.stateVersion = "24.05";
 }
