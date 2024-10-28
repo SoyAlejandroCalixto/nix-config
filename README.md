@@ -29,6 +29,18 @@ git clone https://github.com/SoyAlejandroCalixto/nix-config.git ~/.nixos
 }
 ```
 
+* Edit the `~/.config/home-manager/home.nix` file to look something like this:
+
+```nix
+{ config, pkgs, ... }:
+{
+  imports = [
+    /home/kappy/.nixos/home-config/main.nix
+  ];
+  home.stateVersion = "24.05";
+}
+```
+
 * Build:
 
 ```bash
