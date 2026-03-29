@@ -19,8 +19,7 @@
   let
     system = "x86_64-linux";
     hostname = "nixos";
-  in
-  {
+  in {
     nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
       inherit system;
       specialArgs = { inherit inputs; }; # Permite a los módulos heredar los inputs como parámetro

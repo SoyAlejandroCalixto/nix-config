@@ -12,8 +12,7 @@ let
       install -Dm444 "$src" "$out/share/fonts/truetype/Onest.ttf"
     '';
   };
-in
-{
+in {
   nixpkgs.config.allowUnfree = true;
   services.flatpak.enable = true;
 
