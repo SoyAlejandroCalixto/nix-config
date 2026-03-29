@@ -56,6 +56,7 @@ in {
     vscode
     zsh
     bibata-cursors
+    mongodb-compass
     nodejs
     gradle
     openjdk25
