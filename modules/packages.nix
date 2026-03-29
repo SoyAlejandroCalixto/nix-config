@@ -1,0 +1,61 @@
+{ pkgs, inputs, ... }:
+let
+  onest = pkgs.stdenvNoCC.mkDerivation {
+    pname = "onest";
+    version = "main";
+    src = pkgs.fetchurl {
+      url = "https://github.com/simpals/onest/raw/refs/heads/main/fonts/variable/Onest%5Bwght%5D.ttf";
+      sha256 = "sha256-P6pLkFZhhJsjMuOUtC+Rtb9VdeVTxRbKqBgR6Gik1Yk=";
+    };
+    dontUnpack = true;
+    installPhase = ''
+      install -Dm444 "$src" "$out/share/fonts/truetype/Onest.ttf"
+    '';
+  };
+in
+{
+  nixpkgs.config.allowUnfree = true;
+  programs.hyprland.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    brave
+    bitwarden-desktop
+    mpv
+    wl-clipboard
+    wtype
+    discord
+    pear-desktop
+    socat
+    pulseaudio
+    rofi
+    hyprpaper
+    eww
+    (lua.withPackages (ps: with ps; [ lgi ]))
+    glib
+    playerctl
+    cliphist
+    hyprshot
+    rofimoji
+    git
+    neovim
+    bat
+    lsd
+    fastfetch
+    wezterm
+    zoxide
+    atuin
+    gh
+    codex
+    gemini-cli
+    bubblewrap
+    tree
+    vscode
+    zsh
+    bibata-cursors
+  ];
+
+  fonts.packages = with pkgs; [
+    onest
+    nerd-fonts.caskaydia-cove
+  ];
+}
