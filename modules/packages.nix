@@ -56,6 +56,9 @@ in {
     vscode
     zsh
     bibata-cursors
+    nodejs
+    gradle
+    openjdk25
   ];
   fonts.packages = with pkgs; [
     onest
