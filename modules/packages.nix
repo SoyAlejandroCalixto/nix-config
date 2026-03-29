@@ -15,12 +15,15 @@ let
 in
 {
   nixpkgs.config.allowUnfree = true;
-  programs.hyprland.enable = true;
+  services.flatpak.enable = true;
 
+  programs.hyprland.enable = true;
   environment.systemPackages = with pkgs; [
     brave
     bitwarden-desktop
     mpv
+    nautilus
+    ranger
     wl-clipboard
     wtype
     discord
@@ -40,6 +43,8 @@ in
     neovim
     bat
     lsd
+    fzf
+    p7zip
     fastfetch
     wezterm
     zoxide
@@ -53,7 +58,6 @@ in
     zsh
     bibata-cursors
   ];
-
   fonts.packages = with pkgs; [
     onest
     nerd-fonts.caskaydia-cove
