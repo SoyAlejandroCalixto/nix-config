@@ -16,15 +16,16 @@ in {
   nixpkgs.config.allowUnfree = true;
   services.flatpak.enable = true;
 
-  programs = {
+  programs = { # Paquetes con una autoconfiguración útil
     hyprland.enable = true;
     nix-ld.enable = true;
-  };
+  }; # Resto de paquetes
   environment.systemPackages = with pkgs; [
     brave
     bitwarden-desktop
     mpv
     nautilus
+    gnome-themes-extra
     ranger
     wl-clipboard
     wtype
@@ -41,6 +42,7 @@ in {
     cliphist
     hyprshot
     rofimoji
+    dunst
     git
     neovim
     bat

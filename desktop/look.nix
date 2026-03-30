@@ -17,4 +17,13 @@
     name = "Bibata-Modern-Classic";
     size = 24;
   };
+
+  home-manager.users.kappy.gtk = {
+    gtk3.enable = true;
+    gtk4.enable = true;
+    gtk3.font.name = "onest";
+    gtk4.font.name = "onest";
+    gtk3.colorScheme = "dark";
+    gtk4.colorScheme = "dark";
+  };
 }

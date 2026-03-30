@@ -25,20 +25,23 @@
       specialArgs = { inherit inputs; }; # Permite a los módulos heredar los inputs como parámetro
 
       modules = [
-        ./hardware-configuration.nix
-        ./modules/audio.nix
-        ./modules/bootloader.nix
-        ./modules/look.nix
-        ./modules/graphics.nix
-        ./modules/lang.nix
-        ./modules/networking.nix
-        ./modules/packages.nix
-        ./modules/users.nix
-        ./modules/shell.nix
-        ./modules/dotfiles.nix
-        ./modules/vscode.nix
         home-manager.nixosModules.home-manager
-        { # Módulo extra inline con boilerplate
+        ./hardware-configuration.nix
+        ./conf/shell.nix
+        ./conf/vscode.nix
+        ./core/audio.nix
+        ./core/bootloader.nix
+        ./core/graphics.nix
+        ./core/lang.nix
+        ./core/networking.nix
+        ./core/packages.nix
+        ./core/users.nix
+        ./desktop/look.nix
+        ./desktop/notifications.nix
+        ./desktop/runner.nix
+        ./desktop/topbar.nix
+        ./desktop/wm.nix
+        { # Módulo extra inline con boilerplate de Nix
           system.stateVersion = "25.11";
           nix.settings.experimental-features = [ "nix-command" "flakes" ];
           home-manager = {
