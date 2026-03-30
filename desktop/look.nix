@@ -18,12 +18,17 @@
     size = 24;
   };
 
-  home-manager.users.kappy.gtk = {
-    gtk3.enable = true;
-    gtk4.enable = true;
-    gtk3.font.name = "onest";
-    gtk4.font.name = "onest";
-    gtk3.colorScheme = "dark";
-    gtk4.colorScheme = "dark";
+  home-manager.users.kappy = {
+    gtk.enable = true;
+    dconf.enable = true;
+    dconf.settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+  };
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-hyprland
+    ];
   };
 }

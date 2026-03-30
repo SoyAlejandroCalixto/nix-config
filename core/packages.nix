@@ -24,8 +24,10 @@ in {
     brave
     bitwarden-desktop
     mpv
-    nautilus
+    nemo
     gnome-themes-extra
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-hyprland
     ranger
     wl-clipboard
     wtype
