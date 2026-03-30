@@ -9,7 +9,7 @@
   };
 
   # Variables de entorno
-  home-manager.users.kappy.home.sessionVariables = {
-    GI_TYPELIB_PATH = lib.makeSearchPath "lib/girepository-1.0" [pkgs.glib.out pkgs.playerctl]; # Para que Lua detecte GObject
+  environment.sessionVariables = {
+    GI_TYPELIB_PATH = lib.makeSearchPath "lib/girepository-1.0" [ pkgs.glib.out pkgs.playerctl ]; # Para que Lua detecte GObject
   };
 }

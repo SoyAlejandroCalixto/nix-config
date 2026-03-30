@@ -16,7 +16,10 @@ in {
   nixpkgs.config.allowUnfree = true;
   services.flatpak.enable = true;
 
-  programs.hyprland.enable = true;
+  programs = {
+    hyprland.enable = true;
+    nix-ld.enable = true;
+  };
   environment.systemPackages = with pkgs; [
     brave
     bitwarden-desktop
