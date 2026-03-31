@@ -25,6 +25,7 @@ in {
     bitwarden-desktop
     mpv
     nemo
+    upscayl
     gnome-themes-extra
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
