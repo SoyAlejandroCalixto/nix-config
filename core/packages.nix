@@ -24,7 +24,7 @@ in {
     brave
     bitwarden-desktop
     mpv
-    nemo
+    nemo-with-extensions
     upscayl
     gnome-themes-extra
     xdg-desktop-portal-gtk
@@ -51,6 +51,9 @@ in {
     bat
     lsd
     fzf
+    file-roller
+    unzip
+    zip
     p7zip
     fastfetch
     wezterm
@@ -69,6 +72,7 @@ in {
     gradle
     openjdk25
   ];
+
   fonts.packages = with pkgs; [
     onest
     nerd-fonts.caskaydia-cove
