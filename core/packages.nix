@@ -64,6 +64,7 @@ in {
     gemini-cli
     bubblewrap
     tree
+    killall
     vscode
     zsh
     bibata-cursors
