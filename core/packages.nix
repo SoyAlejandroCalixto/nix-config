@@ -26,6 +26,7 @@ in {
     mpv
     nemo-with-extensions
     upscayl
+    libresprite
     gnome-themes-extra
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
