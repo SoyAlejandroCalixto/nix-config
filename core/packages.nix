@@ -27,6 +27,7 @@ in {
     nemo-with-extensions
     upscayl
     libresprite
+    blockbench
     gnome-themes-extra
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
@@ -62,7 +63,6 @@ in {
     atuin
     gh
     codex
-    gemini-cli
     bubblewrap
     tree
     killall
